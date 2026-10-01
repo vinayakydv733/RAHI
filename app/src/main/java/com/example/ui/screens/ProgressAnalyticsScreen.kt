@@ -93,7 +93,7 @@ fun ProgressAnalyticsScreen(
             // Student Identity Badge
             Surface(
                 color = MaterialTheme.colorScheme.surfaceContainerLowest,
-                shape = RoundedCornerShape(16.dp),
+                shape = RoundedCornerShape(24.dp),
                 shadowElevation = 1.dp,
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -258,7 +258,7 @@ fun ProgressAnalyticsScreen(
             // Overall Gauge Card
             Surface(
                 color = MaterialTheme.colorScheme.surfaceContainerLowest,
-                shape = RoundedCornerShape(16.dp),
+                shape = RoundedCornerShape(24.dp),
                 shadowElevation = 1.dp,
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -354,7 +354,7 @@ fun StatCard(
 ) {
     Surface(
         color = MaterialTheme.colorScheme.surfaceContainerLowest,
-        shape = RoundedCornerShape(14.dp),
+        shape = RoundedCornerShape(24.dp),
         shadowElevation = 1.dp,
         modifier = modifier
     ) {
@@ -406,7 +406,7 @@ fun StrengthRow(
 ) {
     Surface(
         color = MaterialTheme.colorScheme.surfaceContainerLowest,
-        shape = RoundedCornerShape(12.dp),
+        shape = RoundedCornerShape(24.dp),
         shadowElevation = 1.dp,
         modifier = Modifier.fillMaxWidth()
     ) {

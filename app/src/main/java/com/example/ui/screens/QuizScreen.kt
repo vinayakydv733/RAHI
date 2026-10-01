@@ -244,7 +244,7 @@ fun QuizScreen(
 
             Surface(
                 color = cardBg,
-                shape = RoundedCornerShape(18.dp),
+                shape = RoundedCornerShape(24.dp),
                 border = BorderStroke(1.dp, cardBorder),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -300,7 +300,7 @@ fun QuizScreen(
 
             Button(
                 onClick = onBack,
-                shape = RoundedCornerShape(12.dp),
+                shape = RoundedCornerShape(24.dp),
                 colors = ButtonDefaults.buttonColors(
                     containerColor = if (isDark) RahiSoftBlue else RahiDeepNavy,
                     contentColor = Color.White
@@ -323,7 +323,7 @@ fun QuizScreen(
                     scoreCount = 0
                     isQuizCompleted = false
                 },
-                shape = RoundedCornerShape(12.dp),
+                shape = RoundedCornerShape(24.dp),
                 border = BorderStroke(1.dp, if (isDark) RahiSoftBlue else RahiDeepNavy),
                 modifier = Modifier
                     .fillMaxWidth()
@@ -423,7 +423,7 @@ fun QuizScreen(
         ) {
             Surface(
                 color = cardBg,
-                shape = RoundedCornerShape(16.dp),
+                shape = RoundedCornerShape(24.dp),
                 border = BorderStroke(1.dp, cardBorder),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -481,7 +481,7 @@ fun QuizScreen(
                     Surface(
                         color = optBg,
                         border = BorderStroke(1.5.dp, optBorder),
-                        shape = RoundedCornerShape(14.dp),
+                        shape = RoundedCornerShape(24.dp),
                         shadowElevation = if (isSelected) 2.dp else 0.dp,
                         modifier = Modifier
                             .fillMaxWidth()
@@ -542,7 +542,7 @@ fun QuizScreen(
             AnimatedVisibility(visible = isSubmitted) {
                 Surface(
                     color = if (isDark) Color(0xFF132034) else Color(0xFFF8FAFC),
-                    shape = RoundedCornerShape(12.dp),
+                    shape = RoundedCornerShape(24.dp),
                     border = BorderStroke(1.dp, cardBorder),
                     modifier = Modifier.fillMaxWidth()
                 ) {
@@ -590,7 +590,7 @@ fun QuizScreen(
                         containerColor = if (isDark) RahiSoftBlue else RahiDeepNavy,
                         contentColor = Color.White
                     ),
-                    shape = RoundedCornerShape(12.dp),
+                    shape = RoundedCornerShape(24.dp),
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(50.dp)
@@ -616,7 +616,7 @@ fun QuizScreen(
                         containerColor = if (isDark) RahiSoftBlue else RahiDeepNavy,
                         contentColor = Color.White
                     ),
-                    shape = RoundedCornerShape(12.dp),
+                    shape = RoundedCornerShape(24.dp),
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(50.dp)

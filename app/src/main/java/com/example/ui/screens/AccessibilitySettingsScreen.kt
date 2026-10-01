@@ -184,7 +184,7 @@ fun AccessibilitySettingsScreen(
             // Dignified note
             Surface(
                 color = MaterialTheme.colorScheme.surfaceContainerLow,
-                shape = RoundedCornerShape(14.dp),
+                shape = RoundedCornerShape(24.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Row(
@@ -223,7 +223,7 @@ private fun PastelAccessTile(
 ) {
     Surface(
         color = bgColor,
-        shape = RoundedCornerShape(16.dp),
+        shape = RoundedCornerShape(24.dp),
         border = if (isSelected) BorderStroke(1.5.dp, iconTint) else null,
         modifier = modifier
             .height(120.dp)

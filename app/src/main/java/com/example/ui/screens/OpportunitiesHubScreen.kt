@@ -299,7 +299,7 @@ fun OpportunitiesHubScreen(
         items(filteredList, key = { it.id }) { opp ->
             Surface(
                 color = cardBg,
-                shape = RoundedCornerShape(16.dp),
+                shape = RoundedCornerShape(24.dp),
                 border = BorderStroke(1.dp, cardBorder),
                 shadowElevation = if (isDarkTheme) 0.dp else 2.dp,
                 modifier = Modifier.fillMaxWidth()

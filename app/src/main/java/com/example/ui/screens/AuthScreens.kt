@@ -153,7 +153,7 @@ fun SignInScreen(
         AnimatedVisibility(visible = showDemoPicker) {
             Surface(
                 color = MaterialTheme.colorScheme.surfaceContainerLow,
-                shape = RoundedCornerShape(12.dp),
+                shape = RoundedCornerShape(24.dp),
                 border = BorderStroke(1.dp, MaterialTheme.colorScheme.secondary.copy(alpha = 0.5f)),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -261,7 +261,7 @@ fun SignInScreen(
         // Welcome affirmation card
         Surface(
             color = MaterialTheme.colorScheme.surfaceContainerLow,
-            shape = RoundedCornerShape(14.dp),
+            shape = RoundedCornerShape(24.dp),
             modifier = Modifier.fillMaxWidth()
         ) {
             Column(modifier = Modifier.padding(14.dp)) {
@@ -304,7 +304,7 @@ fun SignInScreen(
         // Form Card
         Surface(
             color = MaterialTheme.colorScheme.surfaceContainerLowest,
-            shape = RoundedCornerShape(16.dp),
+            shape = RoundedCornerShape(24.dp),
             shadowElevation = 1.dp,
             modifier = Modifier.fillMaxWidth()
         ) {
@@ -338,7 +338,7 @@ fun SignInScreen(
                         modifier = Modifier
                             .fillMaxWidth()
                             .testTag("signin_identifier_field"),
-                        shape = RoundedCornerShape(12.dp),
+                        shape = RoundedCornerShape(24.dp),
                         singleLine = true
                     )
                 }
@@ -378,7 +378,7 @@ fun SignInScreen(
                         modifier = Modifier
                             .fillMaxWidth()
                             .testTag("signin_password_field"),
-                        shape = RoundedCornerShape(12.dp),
+                        shape = RoundedCornerShape(24.dp),
                         singleLine = true
                     )
                 }
@@ -419,7 +419,7 @@ fun SignInScreen(
                         containerColor = MaterialTheme.colorScheme.primary,
                         contentColor = MaterialTheme.colorScheme.onPrimary
                     ),
-                    shape = RoundedCornerShape(12.dp),
+                    shape = RoundedCornerShape(24.dp),
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(50.dp)
@@ -453,7 +453,7 @@ fun SignInScreen(
                 // Continue with Google
                 OutlinedButton(
                     onClick = { onSignIn(identifier, password) },
-                    shape = RoundedCornerShape(12.dp),
+                    shape = RoundedCornerShape(24.dp),
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(48.dp)
@@ -487,7 +487,7 @@ fun SignInScreen(
         // Bottom Low Data toggle banner
         Surface(
             color = MaterialTheme.colorScheme.surfaceContainerLow,
-            shape = RoundedCornerShape(12.dp),
+            shape = RoundedCornerShape(24.dp),
             modifier = Modifier.fillMaxWidth()
         ) {
             Row(
@@ -598,7 +598,7 @@ fun RegisterStep1Screen(
             modifier = Modifier
                 .fillMaxWidth()
                 .testTag("reg_fullname_input"),
-            shape = RoundedCornerShape(12.dp),
+            shape = RoundedCornerShape(24.dp),
             singleLine = true
         )
 
@@ -610,7 +610,7 @@ fun RegisterStep1Screen(
             modifier = Modifier
                 .fillMaxWidth()
                 .testTag("reg_email_input"),
-            shape = RoundedCornerShape(12.dp),
+            shape = RoundedCornerShape(24.dp),
             singleLine = true
         )
 
@@ -622,7 +622,7 @@ fun RegisterStep1Screen(
             modifier = Modifier
                 .fillMaxWidth()
                 .testTag("reg_phone_input"),
-            shape = RoundedCornerShape(12.dp),
+            shape = RoundedCornerShape(24.dp),
             singleLine = true
         )
 
@@ -635,7 +635,7 @@ fun RegisterStep1Screen(
             modifier = Modifier
                 .fillMaxWidth()
                 .testTag("reg_password_input"),
-            shape = RoundedCornerShape(12.dp),
+            shape = RoundedCornerShape(24.dp),
             singleLine = true
         )
 
@@ -660,7 +660,7 @@ fun RegisterStep1Screen(
             modifier = Modifier
                 .fillMaxWidth()
                 .testTag("reg_confirm_password_input"),
-            shape = RoundedCornerShape(12.dp),
+            shape = RoundedCornerShape(24.dp),
             singleLine = true
         )
 
@@ -683,7 +683,7 @@ fun RegisterStep1Screen(
                 containerColor = MaterialTheme.colorScheme.primary,
                 contentColor = MaterialTheme.colorScheme.onPrimary
             ),
-            shape = RoundedCornerShape(12.dp),
+            shape = RoundedCornerShape(24.dp),
             modifier = Modifier
                 .fillMaxWidth()
                 .height(50.dp)
@@ -771,7 +771,7 @@ fun RegisterStep2Screen(
             val isSelected = educationLevel == title
             Surface(
                 color = if (isSelected) AarohanSecondaryFixed else MaterialTheme.colorScheme.surfaceContainerLowest,
-                shape = RoundedCornerShape(12.dp),
+                shape = RoundedCornerShape(24.dp),
                 border = BorderStroke(1.dp, if (isSelected) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.outlineVariant),
                 modifier = Modifier
                     .fillMaxWidth()
@@ -832,7 +832,7 @@ fun RegisterStep2Screen(
         // Bilingual Toggle
         Surface(
             color = AarohanSecondaryFixed,
-            shape = RoundedCornerShape(12.dp),
+            shape = RoundedCornerShape(24.dp),
             modifier = Modifier.fillMaxWidth()
         ) {
             Row(
@@ -854,7 +854,7 @@ fun RegisterStep2Screen(
                 containerColor = MaterialTheme.colorScheme.primary,
                 contentColor = MaterialTheme.colorScheme.onPrimary
             ),
-            shape = RoundedCornerShape(12.dp),
+            shape = RoundedCornerShape(24.dp),
             modifier = Modifier
                 .fillMaxWidth()
                 .height(50.dp)

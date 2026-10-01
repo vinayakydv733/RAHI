@@ -95,7 +95,7 @@ fun DownloadsScreen(
             // Storage Bar
             Surface(
                 color = MaterialTheme.colorScheme.surfaceContainerLowest,
-                shape = RoundedCornerShape(14.dp),
+                shape = RoundedCornerShape(24.dp),
                 shadowElevation = 1.dp,
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -168,7 +168,7 @@ fun DownloadsScreen(
                 items(savedModules) { module ->
                     Surface(
                         color = MaterialTheme.colorScheme.surfaceContainerLowest,
-                        shape = RoundedCornerShape(12.dp),
+                        shape = RoundedCornerShape(24.dp),
                         shadowElevation = 1.dp,
                         modifier = Modifier.fillMaxWidth()
                     ) {
@@ -231,7 +231,7 @@ fun DownloadsScreen(
                     containerColor = MaterialTheme.colorScheme.primaryContainer,
                     contentColor = MaterialTheme.colorScheme.onPrimary
                 ),
-                shape = RoundedCornerShape(12.dp),
+                shape = RoundedCornerShape(24.dp),
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(48.dp)

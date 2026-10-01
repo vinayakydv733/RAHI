@@ -46,7 +46,7 @@ fun OnboardingScreen(
             Box(
                 modifier = Modifier
                     .size(48.dp)
-                    .clip(RoundedCornerShape(12.dp))
+                    .clip(RoundedCornerShape(24.dp))
                     .background(MaterialTheme.colorScheme.surfaceContainerHigh),
                 contentAlignment = Alignment.Center
             ) {
@@ -90,7 +90,7 @@ fun OnboardingScreen(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(180.dp)
-                .clip(RoundedCornerShape(16.dp))
+                .clip(RoundedCornerShape(24.dp))
         ) {
             AsyncImage(
                 model = "https://lh3.googleusercontent.com/aida-public/AB6AXuAQruVf9zWFxLikPqOgEtUEMf67m0SPk_cWAseCGHHlUaB-S_LXmUK0AkZBgv71fQGcCQnbVBSE43n3ieWtBecfuYlka5bjzsKvXj8sbr8pExW-A3iP4M2Z351Xpbubp7MZvpjJDdo3io9gh3dZOrhtXZPOtsvDLGzJJXQaYtFVazlfF1pFC5OZZzuu0dySznbICsYOPNeGOMqmBzIm9Xosac_YTUUeco4XI7or1Dq5FKlkdoct_z9A",
@@ -129,7 +129,7 @@ fun OnboardingScreen(
         // Slide Content Card
         Surface(
             color = MaterialTheme.colorScheme.surfaceContainerLowest,
-            shape = RoundedCornerShape(16.dp),
+            shape = RoundedCornerShape(24.dp),
             shadowElevation = 1.dp,
             modifier = Modifier.fillMaxWidth()
         ) {
@@ -159,7 +159,7 @@ fun OnboardingScreen(
                         ) {
                             Surface(
                                 color = MaterialTheme.colorScheme.surfaceContainerLow,
-                                shape = RoundedCornerShape(12.dp),
+                                shape = RoundedCornerShape(24.dp),
                                 modifier = Modifier.weight(1f)
                             ) {
                                 Column(modifier = Modifier.padding(12.dp)) {
@@ -171,7 +171,7 @@ fun OnboardingScreen(
                             }
                             Surface(
                                 color = MaterialTheme.colorScheme.surfaceContainerLow,
-                                shape = RoundedCornerShape(12.dp),
+                                shape = RoundedCornerShape(24.dp),
                                 modifier = Modifier.weight(1f)
                             ) {
                                 Column(modifier = Modifier.padding(12.dp)) {
@@ -192,7 +192,7 @@ fun OnboardingScreen(
                         Column(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .background(MaterialTheme.colorScheme.surfaceContainerLow, RoundedCornerShape(12.dp))
+                                .background(MaterialTheme.colorScheme.surfaceContainerLow, RoundedCornerShape(24.dp))
                                 .padding(12.dp),
                             verticalArrangement = Arrangement.spacedBy(8.dp)
                         ) {
@@ -287,7 +287,7 @@ fun OnboardingScreen(
                     containerColor = MaterialTheme.colorScheme.primary,
                     contentColor = MaterialTheme.colorScheme.onPrimary
                 ),
-                shape = RoundedCornerShape(12.dp),
+                shape = RoundedCornerShape(24.dp),
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(50.dp)

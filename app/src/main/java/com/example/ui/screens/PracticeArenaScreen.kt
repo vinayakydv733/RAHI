@@ -330,7 +330,7 @@ fun PracticeArenaScreen(
             ) {
                 Surface(
                     color = if (isDark) RahiNavySurface else RahiSoftBlueContainer,
-                    shape = RoundedCornerShape(14.dp),
+                    shape = RoundedCornerShape(24.dp),
                     border = BorderStroke(1.dp, if (isDark) RahiNavyBorder else RahiSoftBlue.copy(alpha = 0.3f)),
                     modifier = Modifier
                         .weight(1f)
@@ -369,7 +369,7 @@ fun PracticeArenaScreen(
 
                 Surface(
                     color = if (isDark) RahiNavySurface else RahiWarmOrangeContainer,
-                    shape = RoundedCornerShape(14.dp),
+                    shape = RoundedCornerShape(24.dp),
                     border = BorderStroke(1.dp, if (isDark) RahiNavyBorder else RahiWarmOrange.copy(alpha = 0.3f)),
                     modifier = Modifier
                         .weight(1f)
@@ -413,7 +413,7 @@ fun PracticeArenaScreen(
             ) {
                 Surface(
                     color = if (isDark) RahiNavySurface else RahiMutedGreenContainer,
-                    shape = RoundedCornerShape(14.dp),
+                    shape = RoundedCornerShape(24.dp),
                     border = BorderStroke(1.dp, if (isDark) RahiNavyBorder else RahiMutedGreen.copy(alpha = 0.3f)),
                     modifier = Modifier
                         .weight(1f)
@@ -452,7 +452,7 @@ fun PracticeArenaScreen(
 
                 Surface(
                     color = if (isDark) RahiNavySurface else Color(0xFFF1F5F9),
-                    shape = RoundedCornerShape(14.dp),
+                    shape = RoundedCornerShape(24.dp),
                     border = BorderStroke(1.dp, if (isDark) RahiNavyBorder else Color(0xFFE2E8F0)),
                     modifier = Modifier
                         .weight(1f)
@@ -792,7 +792,7 @@ private fun DailyChallengeCard(
             // ---------------------------------------------------------
             Surface(
                 color = if (isDark) Color(0xFF132034) else RahiSoftBlueContainer,
-                shape = RoundedCornerShape(12.dp),
+                shape = RoundedCornerShape(24.dp),
                 border = BorderStroke(1.dp, RahiSoftBlue.copy(alpha = 0.35f)),
                 modifier = Modifier
                     .fillMaxWidth()
@@ -952,7 +952,7 @@ private fun DailyChallengeCard(
             // Primary Action Button (Deep Navy in Light Mode, Soft Blue in Dark Mode)
             Button(
                 onClick = onStart,
-                shape = RoundedCornerShape(12.dp),
+                shape = RoundedCornerShape(24.dp),
                 colors = ButtonDefaults.buttonColors(
                     containerColor = if (isDark) RahiSoftBlue else RahiDeepNavy,
                     contentColor = Color.White
@@ -1103,7 +1103,7 @@ private fun DailyChallengeSection(
         pastChallenges.forEach { (day, title, result) ->
             Surface(
                 color = cardBg,
-                shape = RoundedCornerShape(14.dp),
+                shape = RoundedCornerShape(24.dp),
                 border = BorderStroke(1.dp, cardBorder),
                 shadowElevation = if (isDark) 0.dp else 1.dp,
                 modifier = Modifier
@@ -1202,7 +1202,7 @@ private fun PracticeTracksSection(
         tracks.forEach { track ->
             Surface(
                 color = cardBg,
-                shape = RoundedCornerShape(14.dp),
+                shape = RoundedCornerShape(24.dp),
                 border = BorderStroke(1.dp, cardBorder),
                 shadowElevation = if (isDark) 0.dp else 1.dp,
                 modifier = Modifier
@@ -1384,7 +1384,7 @@ private fun RevisionSection(
         // Adaptive Learning Insight Banner
         Surface(
             color = if (isDark) Color(0xFF132034) else RahiSoftBlueContainer,
-            shape = RoundedCornerShape(14.dp),
+            shape = RoundedCornerShape(24.dp),
             border = BorderStroke(1.dp, RahiSoftBlue.copy(alpha = 0.4f)),
             modifier = Modifier.fillMaxWidth()
         ) {
@@ -1446,7 +1446,7 @@ private fun RevisionSection(
         revisionItems.forEach { (title, subtitle) ->
             Surface(
                 color = cardBg,
-                shape = RoundedCornerShape(14.dp),
+                shape = RoundedCornerShape(24.dp),
                 border = BorderStroke(1.dp, cardBorder),
                 shadowElevation = if (isDark) 0.dp else 1.dp,
                 modifier = Modifier
@@ -1514,7 +1514,7 @@ private fun OfflineQuizSection(
         // Offline Banner with Muted Green accent
         Surface(
             color = if (isDark) Color(0xFF063323) else RahiMutedGreenContainer,
-            shape = RoundedCornerShape(14.dp),
+            shape = RoundedCornerShape(24.dp),
             border = BorderStroke(1.dp, RahiMutedGreen.copy(alpha = 0.4f)),
             modifier = Modifier.fillMaxWidth()
         ) {
@@ -1559,7 +1559,7 @@ private fun OfflineQuizSection(
         packs.forEach { pack ->
             Surface(
                 color = cardBg,
-                shape = RoundedCornerShape(14.dp),
+                shape = RoundedCornerShape(24.dp),
                 border = BorderStroke(1.dp, cardBorder),
                 shadowElevation = if (isDark) 0.dp else 1.dp,
                 modifier = Modifier

@@ -233,11 +233,12 @@ fun AarohanBottomNavigationBar(
     onTabSelected: (NavigationTab) -> Unit
 ) {
     Surface(
-        color = MaterialTheme.colorScheme.surfaceContainerLowest.copy(alpha = 0.95f),
-        shadowElevation = 8.dp,
-        shape = RoundedCornerShape(topStart = 16.dp, topEnd = 16.dp),
+        color = MaterialTheme.colorScheme.surface,
+        shadowElevation = 12.dp,
+        shape = RoundedCornerShape(32.dp),
         modifier = Modifier
             .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 16.dp)
             .navigationBarsPadding()
     ) {
         Row(
@@ -346,7 +347,7 @@ fun MountainPathSearchDiagram(
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(12.dp))
+            .clip(RoundedCornerShape(24.dp))
             .background(MaterialTheme.colorScheme.surfaceContainerLow)
             .padding(12.dp)
     ) {
@@ -480,7 +481,7 @@ fun CodeSnippetBlock(
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(12.dp))
+            .clip(RoundedCornerShape(24.dp))
             .background(MaterialTheme.colorScheme.primaryContainer)
             .padding(14.dp)
     ) {

@@ -2,89 +2,75 @@ package com.example.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-// Aarohan Calm Intelligence Design Tokens
-val AarohanSurface = Color(0xFFF8F9FF)
-val AarohanSurfaceDim = Color(0xFFCBDBF5)
-val AarohanSurfaceBright = Color(0xFFF8F9FF)
-val AarohanSurfaceContainerLowest = Color(0xFFFFFFFF)
-val AarohanSurfaceContainerLow = Color(0xFFEFF4FF)
-val AarohanSurfaceContainer = Color(0xFFE5EEFF)
-val AarohanSurfaceContainerHigh = Color(0xFFDCE9FF)
-val AarohanSurfaceContainerHighest = Color(0xFFD3E4FE)
-val AarohanSurfaceVariant = Color(0xFFD3E4FE)
+// Smart Learning App UI Pastel Palette (Dribbble Inspiration)
+val BackgroundSurface = Color(0xFFF5F6FA) // Off-white/slate grey background
+val BackgroundGradientStart = Color(0xFFE8DDF5) // Soft pastel lavender
+val BackgroundGradientEnd = Color(0xFFF3EEFA)
 
-val AarohanOnSurface = Color(0xFF0B1C30)
-val AarohanOnSurfaceVariant = Color(0xFF45464D)
-val AarohanInverseSurface = Color(0xFF213145)
-val AarohanInverseOnSurface = Color(0xFFEAF1FF)
+val PastelMagenta = Color(0xFFDF8BEB) // Active states, Ongoing tasks
+val PastelMint = Color(0xFFCCEBDD) // Today's tasks, Analytics
+val PastelBlue = Color(0xFFACD8F6) // Completed tasks
+val PastelYellow = Color(0xFFF7E589) // Upcoming tasks, Pills
+val CharcoalDark = Color(0xFF191C27) // Headings, Active states
 
-val AarohanOutline = Color(0xFF76777D)
-val AarohanOutlineVariant = Color(0xFFC6C6CD)
-val AarohanSurfaceTint = Color(0xFF565E74)
+val TextPrimary = CharcoalDark
+val TextSecondary = Color(0xFF8C90A0)
 
-val AarohanPrimary = Color(0xFF0B1324)
-val AarohanOnPrimary = Color(0xFFFFFFFF)
-val AarohanPrimaryContainer = Color(0xFF131B2E)
-val AarohanOnPrimaryContainer = Color(0xFF7C839B)
-val AarohanInversePrimary = Color(0xFFBEC6E0)
-val AarohanPrimaryFixed = Color(0xFFDAE2FD)
-val AarohanPrimaryFixedDim = Color(0xFFBEC6E0)
-val AarohanOnPrimaryFixed = Color(0xFF131B2E)
-val AarohanOnPrimaryFixedVariant = Color(0xFF3F465C)
+// Standard Material Colors mapped to the aesthetic
+val Primary = PastelMagenta
+val OnPrimary = Color.White
+val PrimaryContainer = PastelMagenta.copy(alpha = 0.2f)
+val OnPrimaryContainer = CharcoalDark
 
-val AarohanSecondary = Color(0xFF006C49)
-val AarohanOnSecondary = Color(0xFFFFFFFF)
-val AarohanSecondaryContainer = Color(0xFF6CF8BB)
-val AarohanOnSecondaryContainer = Color(0xFF00714D)
-val AarohanSecondaryFixed = Color(0xFF6FFBBE)
-val AarohanSecondaryFixedDim = Color(0xFF4EDEA3)
-val AarohanOnSecondaryFixed = Color(0xFF002113)
-val AarohanOnSecondaryFixedVariant = Color(0xFF005236)
+val Secondary = PastelMint
+val OnSecondary = CharcoalDark
+val SecondaryContainer = PastelMint.copy(alpha = 0.5f)
+val OnSecondaryContainer = CharcoalDark
 
-val AarohanTertiary = Color(0xFF1E293B)
-val AarohanOnTertiary = Color(0xFFFFFFFF)
-val AarohanTertiaryContainer = Color(0xFF07006C)
-val AarohanOnTertiaryContainer = Color(0xFF7073FF)
+val Tertiary = PastelBlue
+val OnTertiary = CharcoalDark
+val TertiaryContainer = PastelBlue.copy(alpha = 0.5f)
+val OnTertiaryContainer = CharcoalDark
 
-val AarohanError = Color(0xFFBA1A1A)
-val AarohanOnError = Color(0xFFFFFFFF)
-val AarohanErrorContainer = Color(0xFFFFDAD6)
-val AarohanOnErrorContainer = Color(0xFF93000A)
+val Surface = BackgroundSurface
+val OnSurface = TextPrimary
+val SurfaceVariant = Color.White
+val OnSurfaceVariant = TextSecondary
 
-// Tri-State Network Modes
-val OnlineGreen = Color(0xFF006C49)
-val OnlineGreenBg = Color(0xFFE6F9F0)
-val LowDataAmber = Color(0xFFD97706)
-val LowDataAmberBg = Color(0xFFFFFBEB)
-val OfflineSlate = Color(0xFF64748B)
-val OfflineSlateBg = Color(0xFFF1F5F9)
+val Outline = Color(0xFFE5E7EB)
+val OutlineVariant = Color(0xFFF3F4F6)
 
-// Focus Mode OLED Palette
+// Tri-State Network Modes (Kept for compatibility)
+val OnlineGreen = PastelMint
+val OnlineGreenBg = PastelMint.copy(alpha = 0.3f)
+val LowDataAmber = PastelYellow
+val LowDataAmberBg = PastelYellow.copy(alpha = 0.3f)
+val OfflineSlate = TextSecondary
+val OfflineSlateBg = OutlineVariant
+
+// Focus Mode OLED Palette (Kept for compatibility)
 val FocusDarkBg = Color(0xFF0B0F19)
 val FocusDarkSurface = Color(0xFF131B2E)
-val FocusHighlightGold = Color(0xFFFACC15)
-val FocusSecondaryMint = Color(0xFF4EDEA3)
+val FocusHighlightGold = PastelYellow
+val FocusSecondaryMint = PastelMint
 
-// =============================================================
-// RAHI Official Design System Palette
-// (Deep Navy, Off-White, Muted Green, Soft Blue, Warm Orange)
-// =============================================================
-val RahiDeepNavy = Color(0xFF0F172A)          // Primary deep navy for text, titles, dark surfaces
-val RahiNavySurface = Color(0xFF1E293B)       // Elevated navy container in dark theme
-val RahiNavyBorder = Color(0xFF334155)        // Subtle navy border
+// RAHI Official Design System Palette (Mapped to pastel variants)
+val RahiDeepNavy = CharcoalDark          
+val RahiNavySurface = CharcoalDark       
+val RahiNavyBorder = Outline        
 
-val RahiOffWhite = Color(0xFFF8FAFC)          // Off-white canvas & screen background
-val RahiOffWhiteCard = Color(0xFFFFFFFF)      // Pure white card background in light theme
-val RahiOffWhiteBorder = Color(0xFFE2E8F0)    // Gentle neutral border in light theme
+val RahiOffWhite = BackgroundSurface          
+val RahiOffWhiteCard = Color(0xFFFFFFFF)      
+val RahiOffWhiteBorder = Outline    
 
-val RahiMutedGreen = Color(0xFF10B981)        // Muted emerald green for accuracy, success, verified
-val RahiMutedGreenContainer = Color(0xFFE6F7F0)
-val RahiOnMutedGreenContainer = Color(0xFF065F46)
+val RahiMutedGreen = PastelMint        
+val RahiMutedGreenContainer = PastelMint.copy(alpha = 0.3f)
+val RahiOnMutedGreenContainer = CharcoalDark
 
-val RahiSoftBlue = Color(0xFF3B82F6)          // Soft sky blue for interactive tracks, mode tabs
-val RahiSoftBlueContainer = Color(0xFFEFF6FF)
-val RahiOnSoftBlueContainer = Color(0xFF1D4ED8)
+val RahiSoftBlue = PastelBlue          
+val RahiSoftBlueContainer = PastelBlue.copy(alpha = 0.3f)
+val RahiOnSoftBlueContainer = CharcoalDark
 
-val RahiWarmOrange = Color(0xFFF97316)        // Warm radiant orange for streak flame, daily pick
-val RahiWarmOrangeContainer = Color(0xFFFFF7ED)
-val RahiOnWarmOrangeContainer = Color(0xFF9A3412)
+val RahiWarmOrange = PastelYellow        
+val RahiWarmOrangeContainer = PastelYellow.copy(alpha = 0.3f)
+val RahiOnWarmOrangeContainer = CharcoalDark

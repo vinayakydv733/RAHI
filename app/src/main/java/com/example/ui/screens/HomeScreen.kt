@@ -198,7 +198,7 @@ fun HomeScreen(
 
                 Surface(
                     color = MaterialTheme.colorScheme.surfaceContainerLowest,
-                    shape = RoundedCornerShape(12.dp),
+                    shape = RoundedCornerShape(24.dp),
                     border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f)),
                     shadowElevation = 3.dp,
                     modifier = Modifier.fillMaxWidth()
@@ -254,7 +254,7 @@ fun HomeScreen(
         // 3. Connectivity Banner (Matching MP.png Screen 2)
         Surface(
             color = if (isDarkTheme) Color(0xFF132B1E) else Color(0xFFEBFDF3),
-            shape = RoundedCornerShape(16.dp),
+            shape = RoundedCornerShape(24.dp),
             modifier = Modifier
                 .fillMaxWidth()
                 .clickable { onToggleDataSaver() }
@@ -330,7 +330,7 @@ fun HomeScreen(
 
             Surface(
                 color = MaterialTheme.colorScheme.surfaceContainerLowest,
-                shape = RoundedCornerShape(16.dp),
+                shape = RoundedCornerShape(24.dp),
                 shadowElevation = 1.dp,
                 modifier = Modifier
                     .fillMaxWidth()
@@ -350,7 +350,7 @@ fun HomeScreen(
                         Box(
                             modifier = Modifier
                                 .size(64.dp)
-                                .clip(RoundedCornerShape(12.dp))
+                                .clip(RoundedCornerShape(24.dp))
                         ) {
                             AsyncImage(
                                 model = "https://lh3.googleusercontent.com/aida-public/AB6AXuDFEI-p3SQhPLWoXc_Oq4iwZ2j_J9_svJ_p1ZkSgAt-mF1BqErdPk_fFdvX3Q9iYfRsAV63j_gU2jkLQRRpyl1yI4SwIPJdp-0m8uuLGQ2QypCZwt4s1S4rCezqH7RHCI_81cD_9cY_Pml3fDykjxc1rq5MwDV6CBwsGtiYGN97lJZ7dMIlUAzYtst4np7tM-LSN0SnCSQiqHdKc9sxYeXUtVgHV52rMjy1le5pnRdX9WhgBK7-sI24",
@@ -427,8 +427,8 @@ fun HomeScreen(
                     modifier = Modifier.weight(1f),
                     title = "Study Lesson",
                     icon = Icons.Default.MenuBook,
-                    bgColor = if (isDarkTheme) Color(0xFF1E293B) else Color(0xFFE8F1FF),
-                    iconTint = Color(0xFF2563EB),
+                    bgColor = MaterialTheme.colorScheme.primaryContainer,
+                    iconTint = MaterialTheme.colorScheme.primary,
                     onClick = { onNavigate(ScreenDestination.LessonReader("binary_search")) }
                 )
 
@@ -436,8 +436,8 @@ fun HomeScreen(
                     modifier = Modifier.weight(1f),
                     title = "Ask Doubt",
                     icon = Icons.Default.Help,
-                    bgColor = if (isDarkTheme) Color(0xFF281C38) else Color(0xFFF3E8FF),
-                    iconTint = Color(0xFF9333EA),
+                    bgColor = MaterialTheme.colorScheme.secondaryContainer,
+                    iconTint = MaterialTheme.colorScheme.secondary,
                     onClick = { onNavigate(ScreenDestination.AskDoubt) }
                 )
 
@@ -445,8 +445,8 @@ fun HomeScreen(
                     modifier = Modifier.weight(1f),
                     title = "Take Quiz",
                     icon = Icons.Default.Assignment,
-                    bgColor = if (isDarkTheme) Color(0xFF332014) else Color(0xFFFFEDD5),
-                    iconTint = Color(0xFFEA580C),
+                    bgColor = MaterialTheme.colorScheme.tertiaryContainer,
+                    iconTint = MaterialTheme.colorScheme.tertiary,
                     onClick = { onNavigate(ScreenDestination.Quiz) }
                 )
             }
@@ -460,8 +460,8 @@ fun HomeScreen(
                     modifier = Modifier.weight(1f),
                     title = "My Progress",
                     icon = Icons.Default.BarChart,
-                    bgColor = if (isDarkTheme) Color(0xFF152A1C) else Color(0xFFDCFCE7),
-                    iconTint = Color(0xFF16A34A),
+                    bgColor = MaterialTheme.colorScheme.tertiaryContainer,
+                    iconTint = MaterialTheme.colorScheme.tertiary,
                     onClick = { onNavigate(ScreenDestination.ProgressAnalytics) }
                 )
 
@@ -469,8 +469,8 @@ fun HomeScreen(
                     modifier = Modifier.weight(1f),
                     title = "Downloads",
                     icon = Icons.Default.Download,
-                    bgColor = if (isDarkTheme) Color(0xFF142735) else Color(0xFFE0F2FE),
-                    iconTint = Color(0xFF0284C7),
+                    bgColor = MaterialTheme.colorScheme.secondaryContainer,
+                    iconTint = MaterialTheme.colorScheme.secondary,
                     onClick = { onNavigate(ScreenDestination.Downloads) }
                 )
 
@@ -478,8 +478,8 @@ fun HomeScreen(
                     modifier = Modifier.weight(1f),
                     title = "Settings",
                     icon = Icons.Default.Settings,
-                    bgColor = if (isDarkTheme) Color(0xFF1F242F) else Color(0xFFF1F5F9),
-                    iconTint = Color(0xFF475569),
+                    bgColor = MaterialTheme.colorScheme.primaryContainer,
+                    iconTint = MaterialTheme.colorScheme.primary,
                     onClick = { onNavigate(ScreenDestination.Accessibility) }
                 )
             }
@@ -488,7 +488,7 @@ fun HomeScreen(
         // 5. Your Weekly Rhythm
         Card(
             colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceContainerLowest),
-            shape = RoundedCornerShape(16.dp),
+            shape = RoundedCornerShape(24.dp),
             elevation = CardDefaults.cardElevation(defaultElevation = 1.dp),
             modifier = Modifier.fillMaxWidth()
         ) {
@@ -557,7 +557,7 @@ fun HomeScreen(
                     // Quiz Accuracy
                     Surface(
                         color = MaterialTheme.colorScheme.surfaceContainerLow,
-                        shape = RoundedCornerShape(12.dp),
+                        shape = RoundedCornerShape(24.dp),
                         modifier = Modifier.weight(1f)
                     ) {
                         Column(modifier = Modifier.padding(12.dp)) {
@@ -588,7 +588,7 @@ fun HomeScreen(
                     // Daily Streak
                     Surface(
                         color = MaterialTheme.colorScheme.surfaceContainerLow,
-                        shape = RoundedCornerShape(12.dp),
+                        shape = RoundedCornerShape(24.dp),
                         modifier = Modifier.weight(1f)
                     ) {
                         Column(modifier = Modifier.padding(12.dp)) {
@@ -657,7 +657,7 @@ fun HomeScreen(
                 items(modules.take(3)) { module ->
                     Card(
                         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceContainerLowest),
-                        shape = RoundedCornerShape(14.dp),
+                        shape = RoundedCornerShape(24.dp),
                         elevation = CardDefaults.cardElevation(defaultElevation = 1.dp),
                         modifier = Modifier
                             .width(240.dp)
@@ -761,7 +761,7 @@ fun HomeScreen(
         // 7. Motivational Sign-off
         Surface(
             color = MaterialTheme.colorScheme.surfaceContainerLow,
-            shape = RoundedCornerShape(12.dp),
+            shape = RoundedCornerShape(24.dp),
             modifier = Modifier.fillMaxWidth()
         ) {
             Row(
@@ -800,7 +800,7 @@ fun QuickActionCard(
 ) {
     Surface(
         color = MaterialTheme.colorScheme.surfaceContainerLowest,
-        shape = RoundedCornerShape(14.dp),
+        shape = RoundedCornerShape(24.dp),
         shadowElevation = 1.dp,
         modifier = modifier
             .clickable(onClick = onClick)
@@ -871,7 +871,7 @@ fun MetricBox(
 ) {
     Surface(
         color = MaterialTheme.colorScheme.surfaceContainerLow,
-        shape = RoundedCornerShape(12.dp),
+        shape = RoundedCornerShape(24.dp),
         modifier = modifier
     ) {
         Column(modifier = Modifier.padding(12.dp)) {
@@ -915,7 +915,7 @@ fun PastelQuickTile(
 ) {
     Surface(
         color = bgColor,
-        shape = RoundedCornerShape(16.dp),
+        shape = RoundedCornerShape(24.dp),
         modifier = modifier
             .height(100.dp)
             .clickable(onClick = onClick)

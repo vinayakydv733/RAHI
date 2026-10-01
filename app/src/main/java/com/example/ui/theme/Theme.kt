@@ -12,53 +12,46 @@ import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
 private val LightColorScheme = lightColorScheme(
-    primary = AarohanPrimary,
-    onPrimary = AarohanOnPrimary,
-    primaryContainer = AarohanPrimaryContainer,
-    onPrimaryContainer = AarohanOnPrimaryContainer,
-    inversePrimary = AarohanInversePrimary,
-    secondary = AarohanSecondary,
-    onSecondary = AarohanOnSecondary,
-    secondaryContainer = AarohanSecondaryContainer,
-    onSecondaryContainer = AarohanOnSecondaryContainer,
-    tertiary = AarohanTertiary,
-    onTertiary = AarohanOnTertiary,
-    tertiaryContainer = AarohanTertiaryContainer,
-    onTertiaryContainer = AarohanOnTertiaryContainer,
-    background = AarohanSurface,
-    onBackground = AarohanOnSurface,
-    surface = AarohanSurface,
-    onSurface = AarohanOnSurface,
-    surfaceVariant = AarohanSurfaceVariant,
-    onSurfaceVariant = AarohanOnSurfaceVariant,
-    surfaceTint = AarohanSurfaceTint,
-    inverseSurface = AarohanInverseSurface,
-    inverseOnSurface = AarohanInverseOnSurface,
-    error = AarohanError,
-    onError = AarohanOnError,
-    errorContainer = AarohanErrorContainer,
-    onErrorContainer = AarohanOnErrorContainer,
-    outline = AarohanOutline,
-    outlineVariant = AarohanOutlineVariant,
+    primary = Primary,
+    onPrimary = OnPrimary,
+    primaryContainer = PrimaryContainer,
+    onPrimaryContainer = OnPrimaryContainer,
+    secondary = Secondary,
+    onSecondary = OnSecondary,
+    secondaryContainer = SecondaryContainer,
+    onSecondaryContainer = OnSecondaryContainer,
+    tertiary = Tertiary,
+    onTertiary = OnTertiary,
+    tertiaryContainer = TertiaryContainer,
+    onTertiaryContainer = OnTertiaryContainer,
+    background = Surface,
+    onBackground = OnSurface,
+    surface = Surface,
+    onSurface = OnSurface,
+    surfaceVariant = SurfaceVariant,
+    onSurfaceVariant = OnSurfaceVariant,
+    outline = Outline,
+    outlineVariant = OutlineVariant,
 )
 
 private val DarkColorScheme = darkColorScheme(
-    primary = AarohanPrimaryFixed,
-    onPrimary = AarohanOnPrimaryFixed,
-    primaryContainer = AarohanPrimaryContainer,
-    onPrimaryContainer = AarohanPrimaryFixedDim,
-    secondary = AarohanSecondaryFixedDim,
-    onSecondary = AarohanOnSecondaryFixed,
-    secondaryContainer = AarohanOnSecondaryFixedVariant,
-    onSecondaryContainer = AarohanSecondaryFixed,
+    // Mapping pastel colors nicely to dark mode
+    primary = Primary,
+    onPrimary = OnPrimary,
+    primaryContainer = PrimaryContainer,
+    onPrimaryContainer = OnPrimaryContainer,
+    secondary = Secondary,
+    onSecondary = OnSecondary,
+    secondaryContainer = SecondaryContainer,
+    onSecondaryContainer = OnSecondaryContainer,
     background = FocusDarkBg,
-    onBackground = AarohanInverseOnSurface,
+    onBackground = Surface,
     surface = FocusDarkSurface,
-    onSurface = AarohanInverseOnSurface,
-    surfaceVariant = AarohanInverseSurface,
-    onSurfaceVariant = AarohanOutlineVariant,
-    outline = AarohanOutline,
-    outlineVariant = AarohanOnSurfaceVariant,
+    onSurface = Surface,
+    surfaceVariant = CharcoalDark,
+    onSurfaceVariant = TextSecondary,
+    outline = Outline,
+    outlineVariant = OutlineVariant,
 )
 
 @Composable
@@ -71,7 +64,7 @@ fun AarohanTheme(
     if (!view.isInEditMode) {
         SideEffect {
             val window = (view.context as Activity).window
-            window.statusBarColor = colorScheme.surface.toArgb()
+            window.statusBarColor = colorScheme.background.toArgb()
             WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = !darkTheme
         }
     }

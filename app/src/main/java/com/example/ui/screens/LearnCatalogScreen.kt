@@ -121,7 +121,7 @@ fun LearnCatalogScreen(
         item {
             Surface(
                 color = MaterialTheme.colorScheme.surfaceContainerLowest,
-                shape = RoundedCornerShape(12.dp),
+                shape = RoundedCornerShape(24.dp),
                 shadowElevation = 1.dp,
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -261,7 +261,7 @@ fun LearnCatalogScreen(
         item {
             Surface(
                 color = MaterialTheme.colorScheme.surfaceContainer,
-                shape = RoundedCornerShape(14.dp),
+                shape = RoundedCornerShape(24.dp),
                 shadowElevation = 1.dp,
                 modifier = Modifier
                     .fillMaxWidth()
@@ -314,7 +314,7 @@ fun ModuleCardItem(
 ) {
     Surface(
         color = MaterialTheme.colorScheme.surfaceContainerLowest,
-        shape = RoundedCornerShape(14.dp),
+        shape = RoundedCornerShape(24.dp),
         shadowElevation = 1.dp,
         modifier = Modifier
             .fillMaxWidth()

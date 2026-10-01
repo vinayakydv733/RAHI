@@ -1,8 +1,10 @@
 package com.example.data.repository
 
 import android.content.Context
+import com.example.BuildConfig
 import com.example.data.local.*
 import com.example.data.model.*
+import com.example.data.remote.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.*
@@ -12,6 +14,7 @@ class AarohanRepository(context: Context) {
     private val database = AarohanDatabase.getDatabase(context)
     private val dao = database.aarohanDao()
     private val scope = CoroutineScope(Dispatchers.IO)
+    private val geminiApi = GeminiApiService.create()
 
     // Flow of modules directly from Room DB
     val modules: Flow<List<CourseModule>> = dao.getAllModules().map { entities ->
@@ -498,11 +501,53 @@ class AarohanRepository(context: Context) {
             timestamp = "Just now",
             userEmail = userEmail
         )
-        val aiMsg = generateMentorResponse(question, userEmail)
 
         scope.launch {
             dao.insertDoubt(userMsg)
-            dao.insertDoubt(aiMsg)
+            
+            try {
+                // Safely get API key. If BuildConfig doesn't exist or doesn't have the field, we fallback.
+                val apiKey = try { BuildConfig.GEMINI_API_KEY } catch (e: Exception) { "" }
+                
+                if (apiKey.isBlank() || apiKey == "MY_GEMINI_API_KEY") {
+                    // Fallback to local hardcoded response if API key isn't provided
+                    val aiMsg = generateMentorResponse(question, userEmail)
+                    dao.insertDoubt(aiMsg)
+                } else {
+                    val request = GeminiRequest(
+                        contents = listOf(
+                            Content(
+                                parts = listOf(
+                                    Part(text = "You are Aarohan AI Mentor, a helpful computer science tutor for rural STEM students. Keep your answers encouraging, clear, and concise. The user asks: $question")
+                                )
+                            )
+                        )
+                    )
+                    val response = geminiApi.generateContent(apiKey, request)
+                    val responseText = response.candidates?.firstOrNull()?.content?.parts?.firstOrNull()?.text 
+                        ?: "I'm sorry, I couldn't process that right now."
+                    
+                    val aiMsg = DoubtMessageEntity(
+                        senderName = "Aarohan AI Mentor",
+                        text = responseText,
+                        isUser = false,
+                        codeSnippet = null, 
+                        timestamp = "Just now",
+                        userEmail = userEmail
+                    )
+                    dao.insertDoubt(aiMsg)
+                }
+            } catch (e: Exception) {
+                val errMsg = DoubtMessageEntity(
+                    senderName = "Aarohan AI Mentor",
+                    text = "Oops! Connection issue or Invalid API Key. (${e.message})",
+                    isUser = false,
+                    codeSnippet = null,
+                    timestamp = "Just now",
+                    userEmail = userEmail
+                )
+                dao.insertDoubt(errMsg)
+            }
         }
     }
 

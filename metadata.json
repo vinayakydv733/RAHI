@@ -1,0 +1,6 @@
+{
+  "name": "RAHI",
+  "description": "Adaptive, high-dignity offline-first AI-powered learning companion for students featuring tri-state connectivity, bilingual AI mentor, interactive STEM lesson reader, quizzes, and focus reading modes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

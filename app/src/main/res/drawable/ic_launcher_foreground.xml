@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Star/Sparkle at peak -->
+    <path
+        android:fillColor="#6FFBBE"
+        android:pathData="M54,26L55.5,31.5L61,33L55.5,34.5L54,40L52.5,34.5L47,33L52.5,31.5Z" />
+    
+    <!-- Left Mountain Peak -->
+    <path
+        android:fillColor="#3F465C"
+        android:pathData="M30,76L46,46L58,66L49,76Z" />
+
+    <!-- Right Mountain Peak with Ascent Path -->
+    <path
+        android:fillColor="#BEC6E0"
+        android:pathData="M54,34L78,76L62,76L54,58L46,76L30,76Z" />
+
+    <!-- Front Emerald Ascent Mountain Peak -->
+    <path
+        android:fillColor="#006C49"
+        android:pathData="M54,36L72,76L36,76Z" />
+
+    <!-- Ascending Path Zig-zag in Bright Emerald / Mint -->
+    <path
+        android:fillColor="#4EDEA3"
+        android:pathData="M54,36L57,48L49,58L61,68L50,76L42,76L53,65L43,56L51,46Z" />
+
+    <!-- Base Horizon line -->
+    <path
+        android:fillColor="#6FFBBE"
+        android:pathData="M28,75H80V77H28Z" />
+</vector>
